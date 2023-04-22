@@ -69,6 +69,7 @@ class Enemy : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
         Vector3 playerPosition = player.transform.position;
+        this.transform.LookAt(player.transform);
         MoveTo3DPoint(playerPosition);
     }
 }
