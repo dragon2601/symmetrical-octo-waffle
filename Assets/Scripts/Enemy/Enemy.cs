@@ -45,6 +45,7 @@ class Enemy : MonoBehaviour
     public void MoveTo3DPoint(Vector3 positionVector)
     {
         double step = _speed * (double)Time.deltaTime;
+        positionVector.y = this.transform.position.y;
         this.transform.position = Vector3.MoveTowards(this.transform.position, positionVector, (float)step);
         animator.SetBool("Walk", true);
     }
@@ -61,7 +62,7 @@ class Enemy : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        this.transform.position = player.transform.position + Vector3.back;
+        this.transform.position = player.transform.position;
     }
 
     // Update is called once per frame
