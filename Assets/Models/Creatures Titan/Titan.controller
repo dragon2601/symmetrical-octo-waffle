@@ -8,7 +8,19 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Titan
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: Walk
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Speed
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -271,7 +283,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Walk
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000013637530348}
   m_Solo: 0
@@ -767,22 +782,22 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102000012208357694}
-    m_Position: {x: 36, y: 60, z: 0}
+    m_Position: {x: 40, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000013637530348}
-    m_Position: {x: 36, y: 0, z: 0}
+    m_Position: {x: 40, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000011753734480}
     m_Position: {x: 36, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000010214840180}
-    m_Position: {x: 36, y: -120, z: 0}
+    m_Position: {x: 40, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000014277125732}
-    m_Position: {x: 36, y: -180, z: 0}
+    m_Position: {x: 40, y: -180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000012569793974}
-    m_Position: {x: 36, y: -240, z: 0}
+    m_Position: {x: 40, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000011778215252}
     m_Position: {x: 36, y: -300, z: 0}
