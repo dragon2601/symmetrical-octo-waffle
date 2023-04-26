@@ -17,11 +17,27 @@ public class Toggle : MonoBehaviour
                 bool activeState = objectsToToggle[i].activeInHierarchy;
                 objectsToToggle[i].SetActive(!activeState);
 
-                // Call the Pause method from the PauseMenu script and pass the new active state
-                if (objectsToToggle[i].name == "PauseMenu") // Make sure to match the name of your PauseMenu GameObject
+                // Call the TogglePause method from the PauseMenu script
+                if (objectsToToggle[i].name == "Pause Menu") // Make sure to match the name of your PauseMenu GameObject
                 {
-                    pauseMenuScript.Pause(!activeState);
+                    pauseMenuScript.TogglePause();
                 }
+            }
+        }
+    }
+
+
+    // Add this new method to the Toggle script
+    public void TogglePauseMenu()
+    {
+        for (int i = 0; i < objectsToToggle.Length; i++)
+        {
+            if (objectsToToggle[i].name == "Pause Menu") // Make sure to match the name of your PauseMenu GameObject
+            {
+                bool activeState = objectsToToggle[i].activeInHierarchy;
+                objectsToToggle[i].SetActive(!activeState);
+                pauseMenuScript.Pause(!activeState);
+                break;
             }
         }
     }

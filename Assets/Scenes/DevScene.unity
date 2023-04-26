@@ -1872,6 +1872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuGameObject: {fileID: 835108410}
   ResumeButton: {fileID: 1709430521}
+  toggleScript: {fileID: 973951027}
 --- !u!1 &885250766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,7 +2135,7 @@ MonoBehaviour:
   objectsToToggle:
   - {fileID: 835108410}
   inputKeys: 70000000
-  pauseMenuScript: {fileID: 0}
+  pauseMenuScript: {fileID: 835108415}
 --- !u!1 &1049725160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,7 +3208,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1709430522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973951027}
+        m_TargetAssemblyTypeName: Toggle, Assembly-CSharp
+        m_MethodName: TogglePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1709430522
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuGameObject;
     private static bool _isPaused;
     public Button ResumeButton;
+    public Toggle toggleScript; // Reference to the Toggle script
 
     public static bool IsPaused()
     {
@@ -46,13 +47,18 @@ public class PauseMenu : MonoBehaviour
 
     public void OnResumeButton()
     {
-        Pause(false);
+        TogglePause();
     }
-
     public void OnQuitButton()
     {
         Time.timeScale = 1;
         _isPaused = false;
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Main Menu"); // Replace "Main Menu" with the exact name of your main menu scene
     }
+
+    public void TogglePause()
+    {
+        Pause(!_isPaused);
+    }
+
 }
